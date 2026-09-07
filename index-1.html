@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nixon Real Estate | Find Your Place. Build Your Future.</title>
+<meta name="description" content="Nixon Real Estate is a modern American real estate brokerage helping clients buy, sell, rent and invest with confidence.">
+<style>
+:root{
+  --ink:#171717;--muted:#6d6d68;--cream:#f6f3ed;--paper:#fffdf9;
+  --gold:#b9975b;--line:#e7e1d6;--white:#fff;
+  --max:1180px;--radius:18px;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--paper);line-height:1.55}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.05;margin:0 0 18px}
+h1{font-size:clamp(3rem,7vw,6.5rem);letter-spacing:-.055em}
+h2{font-size:clamp(2.2rem,4vw,4rem);letter-spacing:-.035em}
+h3{font-size:1.55rem}
+p{color:var(--muted);margin:0 0 18px}
+a{text-decoration:none;color:inherit}.container{width:min(var(--max),calc(100% - 40px));margin:auto}
+.topbar{background:var(--ink);color:#fff;padding:9px 0;font-size:12px}
+.topbar .container{display:flex;justify-content:space-between;gap:20px}
+header{position:absolute;z-index:10;left:0;right:0;color:#fff;padding:24px 0}
+nav{display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:Georgia,serif;font-size:27px;font-weight:700;letter-spacing:.02em}
+.logo span{color:#d8bc87}
+.links{display:flex;gap:28px;font-size:14px}.links a{opacity:.92}.links a:hover{color:#e2c996}
+.menu{display:none;border:1px solid #ffffff55;background:#ffffff15;color:#fff;border-radius:10px;padding:8px 11px}
+.hero{min-height:760px;color:#fff;display:flex;align-items:center;position:relative;background:
+linear-gradient(90deg,rgba(0,0,0,.72),rgba(0,0,0,.28)),
+url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=85") center/cover}
+.hero-content{max-width:760px;padding-top:90px}.eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:11px;font-weight:700;color:#dfc58e;margin-bottom:18px}
+.hero p{color:#f2eee7;max-width:600px;font-size:18px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border-radius:999px;font-weight:700;font-size:14px;border:1px solid transparent;cursor:pointer}
+.btn.primary{background:#fff;color:var(--ink)}.btn.gold{background:var(--gold);color:#fff}.btn.outline{border-color:#ffffff66;color:#fff}
+.searchbox{margin-top:-52px;position:relative;z-index:3}.search-inner{background:#fff;border:1px solid var(--line);box-shadow:0 18px 55px #00000014;border-radius:16px;padding:18px;display:grid;grid-template-columns:1.1fr 1.1fr .8fr .8fr auto;gap:10px}
+.field{border:1px solid var(--line);border-radius:10px;padding:10px 13px;background:#fff}.field label{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:#888;margin-bottom:3px}.field select,.field input{border:0;outline:0;width:100%;font:inherit;background:transparent;color:var(--ink)}
+section{padding:100px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:40px}.section-head p{max-width:500px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}.photo{height:250px;background-size:cover;background-position:center;position:relative}.tag{position:absolute;left:15px;top:15px;background:#fff;padding:7px 10px;border-radius:999px;font-size:11px;font-weight:800}.card-body{padding:20px}.price{font-weight:800;font-size:20px;margin-bottom:4px}.meta{font-size:13px;color:#777}.location{font-size:14px;color:#555;margin-top:9px}.card-link{display:inline-block;margin-top:17px;font-size:13px;font-weight:800;border-bottom:1px solid var(--gold)}
+.light{background:var(--cream)}.split{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}.stat{border-top:1px solid var(--line);padding-top:15px}.stat strong{display:block;font:700 34px Georgia,serif}.stat span{font-size:12px;color:#777}
+.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}.service{background:#fff;padding:34px;min-height:210px}.num{font-size:12px;color:var(--gold);font-weight:800}
+.agent{display:flex;gap:15px;align-items:center;padding:18px;border:1px solid var(--line);border-radius:15px;background:#fff}.avatar{width:65px;height:65px;border-radius:50%;background-size:cover;background-position:center;flex:none}.agent h3{font-size:19px;margin-bottom:3px}.agent p{font-size:12px;margin:0}
+.testimonials{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.quote{padding:28px;background:#fff;border:1px solid var(--line);border-radius:16px}.stars{letter-spacing:2px;margin-bottom:14px}.quote p{font-family:Georgia,serif;font-size:18px;color:#333}.quote small{color:#777}
+.cta{background:var(--ink);color:#fff;border-radius:25px;padding:70px}.cta p{color:#bbb;max-width:620px}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:60px}.contact-list{display:grid;gap:17px;margin-top:28px}.contact-item strong{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:#999}.contact-item a{font-size:18px}
+form{display:grid;gap:12px}.input{padding:14px;border:1px solid var(--line);border-radius:10px;font:inherit;width:100%;background:#fff}.input.textarea{min-height:130px;resize:vertical}
+footer{background:#111;color:#fff;padding:60px 0 25px}.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:35px}.footer-grid p,.footer-grid a{color:#aaa;font-size:13px}.footer-grid h4{margin:0 0 13px}.copyright{border-top:1px solid #292929;margin-top:40px;padding-top:20px;color:#777;font-size:11px;display:flex;justify-content:space-between}
+.notice{font-size:11px;color:#8c8c87;margin-top:12px}
+@media(max-width:900px){.links{display:none}.menu{display:block}.search-inner{grid-template-columns:1fr 1fr}.search-inner .btn{grid-column:1/-1}.grid,.testimonials,.service-grid{grid-template-columns:1fr 1fr}.split,.contact{grid-template-columns:1fr;gap:35px}.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.container{width:min(var(--max),calc(100% - 28px))}.topbar{display:none}.hero{min-height:700px}.hero-content{padding-top:70px}.hero p{font-size:16px}.searchbox{margin-top:-35px}.search-inner{grid-template-columns:1fr;padding:12px}.grid,.testimonials,.service-grid,.stats{grid-template-columns:1fr}section{padding:70px 0}.section-head{display:block}.section-head .btn{margin-top:10px}.cta{padding:40px 25px}.footer-grid{grid-template-columns:1fr}.copyright{display:block}.copyright span{display:block;margin-top:8px}}
+
+.property-results{display:none;margin-top:18px;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 18px 55px #00000014}
+.property-results.active{display:block}.result-row{display:flex;gap:15px;padding:15px;border-bottom:1px solid var(--line);align-items:center;cursor:pointer}
+.result-row:last-child{border-bottom:0}.result-row:hover{background:var(--cream)}
+.result-thumb{width:90px;height:70px;border-radius:10px;background-size:cover;background-position:center;flex:none}
+.result-row strong{display:block}.result-row small{color:#777}.no-results{padding:22px;color:#777}
+.detail-view{display:none}.detail-view.active{display:block}.detail-layout{display:grid;grid-template-columns:1.1fr .9fr;gap:35px}
+.detail-image{height:500px;border-radius:20px;background-size:cover;background-position:center}.detail-panel{border:1px solid var(--line);border-radius:20px;padding:30px;background:#fff}.detail-price{font:700 35px Georgia,serif;margin:10px 0}.detail-meta{color:#777;margin-bottom:22px}.detail-panel ul{padding-left:20px;color:#666}.back-btn{border:0;background:none;padding:0;margin-bottom:20px;font-weight:800;cursor:pointer}
+@media(max-width:900px){.detail-layout{grid-template-columns:1fr}.detail-image{height:360px}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="container"><span>Serving clients across Greater Austin & Central Texas</span><span>Mon–Sat · 8:00 AM–7:00 PM</span></div></div>
+
+<header>
+<div class="container"><nav>
+<a class="logo" href="#">NIXON <span>REAL ESTATE</span></a>
+<div class="links">
+<a href="#properties">Buy</a><a href="#services">Sell</a><a href="#properties">Rent</a><a href="#about">About</a><a href="#agents">Agents</a><a href="#contact">Contact</a>
+</div><button class="menu">Menu</button>
+</nav></div>
+</header>
+
+<main>
+<section class="hero">
+<div class="container"><div class="hero-content">
+<div class="eyebrow">Austin, Texas · Residential & Investment</div>
+<h1>Find your place.<br>Build your future.</h1>
+<p>Thoughtful real estate guidance for buying, selling, renting and investing. Local expertise, modern marketing and a relationship-first approach.</p>
+<div class="actions"><a class="btn primary" href="#properties">Explore Properties</a><a class="btn outline" href="#contact">Talk to an Agent</a></div>
+</div></div>
+</section>
+
+<div class="container searchbox"><div class="search-inner" id="propertySearch">
+<div class="field"><label>I'm looking to</label><select id="typeFilter"><option value="ALL">Any</option><option value="FOR SALE">Buy</option><option value="FOR RENT">Rent</option><option value="INVEST">Invest</option></select></div>
+<div class="field"><label>Location</label><input id="addressSearch" placeholder="Address, city, ZIP or property name"></div>
+<div class="field"><label>Min price</label><select id="minPrice"><option value="0">No minimum</option><option value="300000">$300k</option><option value="500000">$500k</option><option value="750000">$750k</option></select></div>
+<div class="field"><label>Max price</label><select id="maxPrice"><option value="0">No maximum</option><option value="750000">$750k</option><option value="1000000">$1M</option><option value="2000000">$2M</option></select></div>
+<button class="btn gold" id="searchBtn" type="button">Search</button>
+</div><div class="property-results" id="searchResults"></div></div>
+
+<section id="properties"><div class="container">
+<div class="section-head"><div><div class="eyebrow">Featured homes</div><h2>Properties worth<br>coming home to.</h2></div><p>Curated listings selected for design, location and long-term value.</p></div>
+<div class="grid">
+<article class="card"><div class="photo" style="background-image:url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=85')"><span class="tag">FOR SALE</span></div><div class="card-body"><div class="price">$1,295,000</div><div class="location">Westlake Hills · Austin, TX</div><div class="meta">4 beds · 3.5 baths · 3,184 sq ft</div><a class="card-link" href="#contact">View property →</a></div></article>
+<article class="card"><div class="photo" style="background-image:url('https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=85')"><span class="tag">FOR SALE</span></div><div class="card-body"><div class="price">$879,000</div><div class="location">Tarrytown · Austin, TX</div><div class="meta">3 beds · 2.5 baths · 2,246 sq ft</div><a class="card-link" href="#contact">View property →</a></div></article>
+<article class="card"><div class="photo" style="background-image:url('https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1000&q=85')"><span class="tag">FOR RENT</span></div><div class="card-body"><div class="price">$4,850 / mo</div><div class="location">Mueller · Austin, TX</div><div class="meta">3 beds · 2 baths · 1,940 sq ft</div><a class="card-link" href="#contact">View property →</a></div></article>
+</div>
+<p class="notice">Sample property data for this website concept. Availability, pricing and specifications should be replaced with verified MLS information before publication.</p>
+<div class="detail-view" id="propertyDetail">
+  <button class="back-btn" id="backToResults">← Back to properties</button>
+  <div class="detail-layout">
+    <div class="detail-image" id="detailImage"></div>
+    <div class="detail-panel">
+      <div class="eyebrow" id="detailStatus">FOR SALE</div>
+      <h2 id="detailTitle">Property</h2>
+      <div class="detail-price" id="detailPrice"></div>
+      <div class="detail-meta" id="detailMeta"></div>
+      <p id="detailDescription"></p>
+      <h3>Property features</h3>
+      <ul id="detailFeatures"></ul>
+      <a class="btn gold" href="#contact">Schedule a Private Tour</a>
+    </div>
+  </div>
+</div>
+
+</div></section>
+
+<section class="light" id="about"><div class="container split">
+<div><div class="eyebrow">The Nixon difference</div><h2>Real estate made personal.</h2><p>We believe a property transaction should feel less like a transaction and more like a partnership. Nixon Real Estate pairs neighborhood-level knowledge with polished marketing, responsive communication and a clear strategy from first conversation to closing.</p><a class="btn gold" href="#contact">Meet Nixon</a></div>
+<div><div class="stats"><div class="stat"><strong>12+</strong><span>Years of combined experience</span></div><div class="stat"><strong>250+</strong><span>Clients represented</span></div><div class="stat"><strong>4.9/5</strong><span>Average client rating</span></div></div></div>
+</div></section>
+
+<section id="services"><div class="container">
+<div class="section-head"><div><div class="eyebrow">What we do</div><h2>Guidance at every move.</h2></div><p>From your first showing to the final signature, our team keeps the process organized, informed and human.</p></div>
+<div class="service-grid">
+<div class="service"><div class="num">01</div><h3>Buy a Home</h3><p>Neighborhood insight, property tours, offer strategy, negotiation and closing support tailored to your goals.</p></div>
+<div class="service"><div class="num">02</div><h3>Sell with Strategy</h3><p>Pricing analysis, preparation, photography, digital marketing and negotiation designed to maximize your opportunity.</p></div>
+<div class="service"><div class="num">03</div><h3>Rent with Confidence</h3><p>Well-matched rentals and practical guidance through applications, lease terms and move-in.</p></div>
+<div class="service"><div class="num">04</div><h3>Invest Smart</h3><p>Market research and property analysis for buyers building a long-term residential portfolio.</p></div>
+<div class="service"><div class="num">05</div><h3>Luxury Representation</h3><p>Discreet service, elevated presentation and strategic exposure for distinctive properties.</p></div>
+<div class="service"><div class="num">06</div><h3>Relocation</h3><p>A streamlined local introduction for clients moving to Austin and the surrounding Central Texas communities.</p></div>
+</div>
+</div></section>
+
+<section class="light" id="agents"><div class="container">
+<div class="section-head"><div><div class="eyebrow">Our people</div><h2>Meet your<br>real estate team.</h2></div><p>Experienced professionals who listen first, advise clearly and stay in your corner.</p></div>
+<div class="grid">
+<div class="agent"><div class="avatar" style="background-image:url('https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=300&q=80')"></div><div><h3>Marcus Nixon</h3><p>Founder & Broker · Residential & Luxury</p></div></div>
+<div class="agent"><div class="avatar" style="background-image:url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80')"></div><div><h3>Olivia Carter</h3><p>Senior Realtor® · Central Austin</p></div></div>
+<div class="agent"><div class="avatar" style="background-image:url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80')"></div><div><h3>Daniel Brooks</h3><p>Realtor® · Investors & Relocation</p></div></div>
+</div>
+</div></section>
+
+<section><div class="container">
+<div class="section-head"><div><div class="eyebrow">Client stories</div><h2>People first.<br>Always.</h2></div></div>
+<div class="testimonials">
+<div class="quote"><div class="stars">★★★★★</div><p>“Nixon made our first home purchase feel surprisingly simple. We always knew what was happening and why.”</p><small>— Jamie R., Austin, TX</small></div>
+<div class="quote"><div class="stars">★★★★★</div><p>“The marketing was exceptional, but the communication was what really stood out. We felt represented from day one.”</p><small>— Michael T., Westlake Hills</small></div>
+<div class="quote"><div class="stars">★★★★★</div><p>“We moved from out of state and needed someone who knew the city. Olivia was patient, practical and incredibly responsive.”</p><small>— Rachel & Chris, relocating to Austin</small></div>
+</div>
+<p class="notice">Testimonials above are sample marketing copy for the website concept and should be replaced with verified client testimonials and permissions before launch.</p>
+</div></section>
+
+<section id="contact"><div class="container"><div class="cta">
+<div class="contact">
+<div><div class="eyebrow">Let's talk</div><h2>Your next move starts here.</h2><p>Tell us what you're looking for and a Nixon advisor will get back to you with the next best step.</p>
+<div class="contact-list">
+<div class="contact-item"><strong>Office</strong><span>901 Westlake Dr, Suite 210, Austin, TX 78746</span></div>
+<div class="contact-item"><strong>Phone</strong><a href="tel:+15125550184">+1 (512) 555-0184</a></div>
+<div class="contact-item"><strong>Email</strong><a href="mailto:nixonnixse@gmail.com">nixonnixse@gmail.com</a></div>
+<div class="contact-item"><strong>iMessage</strong><a href="mailto:xznnaturelover@icloud.com">xznnaturelover@icloud.com</a></div>
+</div>
+<p class="notice" style="color:#888">The office address, phone and email shown here are fictional demo details created for this website concept.</p>
+</div>
+<form onsubmit="event.preventDefault();alert('Thanks! This demo form is ready to connect to your CRM or email service.');">
+<input class="input" required placeholder="Full name">
+<input class="input" required type="email" placeholder="Email address">
+<input class="input" placeholder="Phone number">
+<select class="input"><option>I'm looking to...</option><option>Buy a home</option><option>Sell a property</option><option>Rent</option><option>Invest</option><option>Relocate</option></select>
+<textarea class="input textarea" placeholder="Tell us a little about what you need"></textarea>
+<button class="btn gold" type="submit">Start a Conversation</button>
+</form>
+</div>
+</div></div></section>
+</main>
+
+<footer><div class="container"><div class="footer-grid">
+<div><a class="logo" href="#">NIXON <span>REAL ESTATE</span></a><p style="margin-top:14px">Modern real estate guidance for Austin and Central Texas.</p></div>
+<div><h4>Explore</h4><a href="#properties">Buy</a><br><a href="#properties">Rent</a><br><a href="#services">Sell</a><br><a href="#services">Invest</a></div>
+<div><h4>Company</h4><a href="#about">About</a><br><a href="#agents">Our Agents</a><br><a href="#contact">Contact</a><br><a href="#">Privacy</a></div>
+<div><h4>Connect</h4><a href="tel:+15125550184">(512) 555-0184</a><br><a href="mailto:nixonnixse@gmail.com">nixonnixse@gmail.com</a><br><a href="mailto:xznnaturelover@icloud.com">iMessage: xznnaturelover@icloud.com</a><br><span style="color:#aaa;font-size:13px">Austin, Texas</span></div>
+</div><div class="copyright"><span>© 2026 Nixon Real Estate. All rights reserved.</span><span>Equal Housing Opportunity · Demo website concept</span></div></div></footer>
+
+<script>
+const properties = [
+ {id:"westlake-901",address:"901 Westlake Drive, Austin, TX 78746",title:"Westlake Modern Estate",status:"FOR SALE",price:"$1,295,000",meta:"4 beds · 3.5 baths · 3,184 sq ft",image:"https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",description:"A refined contemporary residence in Westlake Hills with generous entertaining spaces, natural light and easy access to Central Austin.",features:["Open-concept living and dining","Chef-inspired kitchen","Primary suite with spa-style bath","Private backyard and covered patio","Attached two-car garage"]},
+ {id:"tarrytown-1804",address:"1804 Windsor Road, Austin, TX 78703",title:"Tarrytown Classic",status:"FOR SALE",price:"$879,000",meta:"3 beds · 2.5 baths · 2,246 sq ft",image:"https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1400&q=85",description:"A warm, beautifully updated Tarrytown home combining timeless character with comfortable modern living.",features:["Updated kitchen","Original architectural details","Large primary bedroom","Mature landscaping","Two-car garage"]},
+ {id:"mueller-1420",address:"1420 McBee Street, Austin, TX 78723",title:"Mueller Garden Residence",status:"FOR RENT",price:"$4,850 / mo",meta:"3 beds · 2 baths · 1,940 sq ft",image:"https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1400&q=85",description:"Bright modern living in Mueller with thoughtful finishes, flexible living space and a walkable neighborhood setting.",features:["Modern kitchen","Dedicated home office","Private outdoor space","Community amenities nearby","Two parking spaces"]}
+];
+
+const searchInput=document.getElementById("addressSearch");
+const searchBtn=document.getElementById("searchBtn");
+const typeFilter=document.getElementById("typeFilter");
+const minPrice=document.getElementById("minPrice");
+const maxPrice=document.getElementById("maxPrice");
+const results=document.getElementById("searchResults");
+const detail=document.getElementById("propertyDetail");
+const cards=document.querySelector("#properties .grid");
+const notice=document.querySelector("#properties .notice");
+
+function priceNumber(price){
+  const n=Number(price.replace(/[^0-9.]/g,""));
+  return price.includes("/ mo") ? n*12 : n;
+}
+
+function showResults(){
+  const q=searchInput.value.trim().toLowerCase();
+  const type=typeFilter.value;
+  const min=Number(minPrice.value||0);
+  const max=Number(maxPrice.value||0);
+
+  let matches=properties.filter(p=>{
+    const searchable=(p.address+" "+p.title+" "+p.status+" "+p.meta).toLowerCase();
+    const textMatch=!q || searchable.includes(q);
+    const typeMatch=type==="ALL" || p.status===type;
+    const price=priceNumber(p.price);
+    const minMatch=price>=min;
+    const maxMatch=!max || price<=max;
+    return textMatch && typeMatch && minMatch && maxMatch;
+  });
+
+  if(matches.length===1){
+    openProperty(matches[0].id);
+    return;
+  }
+
+  results.innerHTML=matches.length ? matches.map(p=>`
+    <div class="result-row" data-id="${p.id}">
+      <div class="result-thumb" style="background-image:url('${p.image}')"></div>
+      <div><strong>${p.address}</strong><small>${p.price} · ${p.meta}</small></div>
+    </div>`).join("") : '<div class="no-results">No matching property was found. Try the full address, street name, city, ZIP code, or adjust your filters.</div>';
+  results.classList.add("active");
+  document.querySelectorAll(".result-row").forEach(row=>row.addEventListener("click",()=>openProperty(row.dataset.id)));
+}
+
+function openProperty(id){
+  const p=properties.find(x=>x.id===id); if(!p)return;
+  cards.style.display="none";
+  notice.style.display="none";
+  results.classList.remove("active");
+  detail.classList.add("active");
+  document.getElementById("detailImage").style.backgroundImage=`url('${p.image}')`;
+  document.getElementById("detailStatus").textContent=p.status;
+  document.getElementById("detailTitle").textContent=p.title;
+  document.getElementById("detailPrice").textContent=p.price;
+  document.getElementById("detailMeta").textContent=p.address+" · "+p.meta;
+  document.getElementById("detailDescription").textContent=p.description;
+  document.getElementById("detailFeatures").innerHTML=p.features.map(f=>`<li>${f}</li>`).join("");
+  detail.scrollIntoView({behavior:"smooth",block:"start"});
+}
+
+searchBtn.addEventListener("click",showResults);
+searchInput.addEventListener("keydown",e=>{if(e.key==="Enter"){e.preventDefault();showResults();}});
+typeFilter.addEventListener("change",()=>{if(searchInput.value.trim())showResults();});
+minPrice.addEventListener("change",()=>{if(searchInput.value.trim())showResults();});
+maxPrice.addEventListener("change",()=>{if(searchInput.value.trim())showResults();});
+
+document.getElementById("backToResults").addEventListener("click",()=>{
+  detail.classList.remove("active");
+  cards.style.display="grid";
+  notice.style.display="block";
+  results.classList.remove("active");
+  document.getElementById("properties").scrollIntoView({behavior:"smooth"});
+});
+</script>
+</body>
+</html>
